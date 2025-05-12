@@ -1,0 +1,98 @@
+// 科技感主题样式
+
+// 全局变量
+:root {
+  --neon-primary: #00ff9d;
+  --neon-secondary: #722ed1;
+  --dark-bg: #000000;
+  --dark-text: #ffffff;
+}
+
+// 暗色主题
+[data-theme="dark"] {
+  --body-bg: var(--dark-bg);
+  --text-color: var(--dark-text);
+  --link-color: var(--neon-primary);
+  --heading-color: var(--neon-primary);
+}
+
+// 进度条样式
+.progress {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  height: 20px;
+  margin: 15px 0;
+  overflow: hidden;
+}
+
+.progress-bar {
+  background: linear-gradient(90deg, var(--neon-primary), var(--neon-secondary));
+  height: 100%;
+  transition: width 0.5s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--dark-text);
+  text-shadow: 0 0 10px var(--neon-primary);
+}
+
+// 卡片样式
+.card {
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid var(--neon-primary);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 15px 0;
+  box-shadow: 0 0 20px rgba(0, 255, 157, 0.2);
+  
+  &:hover {
+    box-shadow: 0 0 30px rgba(0, 255, 157, 0.4);
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+  }
+}
+
+// 导航样式
+.nav-item {
+  .nav-link {
+    color: var(--dark-text);
+    
+    &:hover {
+      color: var(--neon-primary);
+      text-shadow: 0 0 10px var(--neon-primary);
+    }
+    
+    &.active {
+      color: var(--neon-primary);
+      border-bottom: 2px solid var(--neon-primary);
+    }
+  }
+}
+
+// 按钮样式
+.btn-neon {
+  background: transparent;
+  border: 1px solid var(--neon-primary);
+  color: var(--neon-primary);
+  padding: 8px 20px;
+  border-radius: 5px;
+  
+  &:hover {
+    background: var(--neon-primary);
+    color: var(--dark-bg);
+    box-shadow: 0 0 20px var(--neon-primary);
+  }
+}
+
+// 动画效果
+@keyframes neon-pulse {
+  0% {
+    box-shadow: 0 0 10px var(--neon-primary);
+  }
+  50% {
+    box-shadow: 0 0 20px var(--neon-primary);
+  }
+  100% {
+    box-shadow: 0 0 10px var(--neon-primary);
+  }
+} 
